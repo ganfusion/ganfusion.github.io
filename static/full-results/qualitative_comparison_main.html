@@ -1,0 +1,320 @@
+<!-- BEGIN: /mnt/g/My Drive/Projects/DiffusionHandles/process_data/qualitative_comp_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Qualitative Comparison on the PhotoGen Dataset</title>
+</head>
+<style>
+table { 
+    table-layout:fixed;
+    width:100%;
+}
+img {
+    max-height:100%;
+    max-width:100%;
+}
+thead th {
+    top: 0;
+    position: sticky;
+    z-index: 20;
+    background-color: white;
+}
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Input</th>
+                <th>Target Edit</th>
+                <th>Ours</th>
+                <th>Obj. Stitch</th>
+                <th>Zero123</th>
+                <th>3DIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/eclair_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/eclair_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/eclair_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/eclair_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/eclair_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/eclair_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_red_car_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_plane_true_depth_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_milk_carton_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_jet_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_dice_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_coffee_real_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chrome_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_big_cube_true_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/chair-occlusion-1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/desk-lamp-cupboard-1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/candles-wine-glass_1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_zoe_building_best_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_taoster_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_shoes_2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_nti_plant_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_lamp_final_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_cube_true_depth_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_chair_ddim_2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/output_depth_estimator_mug_13_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/guitar_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/guitar_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/guitar_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/guitar_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/guitar_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/guitar_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/banana_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/banana_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/banana_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/banana_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/banana_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/banana_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/outputorig_car_beach_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/car_real_1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_1_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/car_real_2_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_2_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_2_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_2_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_2_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/car_real_2_3dit.png"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_input.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_edit.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_ours.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_objstitch.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_zero123.png"></td>
+                <td><img src="images/qualitative_comparison_main/sunflower_1_3dit.png"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
+<!-- END: /mnt/g/My Drive/Projects/DiffusionHandles/process_data/qualitative_comp_template.html -->
