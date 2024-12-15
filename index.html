@@ -130,15 +130,15 @@
          <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href=""
+              <span class="link-block">
+                <a href="https://ganfusion.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Arxiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href=""
@@ -182,7 +182,7 @@
           alt="Teaser."/>
         <h2 class="subtitle has-text-centered">
         <span class="dnerf">GANFusion</span> is a text-guided feed-forward 3D generator that is trained with only single-view image supervision. Unlike
-        previous methods such as <a herf="https://zj-dong.github.io/AG3D/">AG3D</a>, which do not enable text conditioning, GANFusion can be conditioned on text while still achieving
+        previous methods such as <a href="https://zj-dong.github.io/AG3D/">AG3D</a>, which do not enable text conditioning, GANFusion can be conditioned on text while still achieving
         high generation quality compared to other text conditioned generators such as <a href="https://github.com/Anciukevicius/RenderDiffusion">RenderDiffusion</a>. We note that GANFusion, unlike
         <a href="https://dreamfusion3d.github.io/">SDS-based optimization methods</a> that use image diffusion priors, does not require any test-time optimization.
       </h2>
@@ -406,9 +406,9 @@
           <ul>
 
             <li>
-              We train an unconditional GAN-based 3D object generator like <a herf="https://zj-dong.github.io/AG3D/">AG3D</a> with a single-view image dataset.
+              We train an unconditional GAN-based 3D object generator like <a href="https://zj-dong.github.io/AG3D/">AG3D</a> with a single-view image dataset.
               3D objects are represented as triplanes and rendered with a renderer followed by an upsampler.
-              We generate a large set of triplanes and caption them using <a herf="https://github.com/salesforce/BLIP">BLIP</a>. 
+              We generate a large set of triplanes and caption them using <a href="https://github.com/salesforce/BLIP">BLIP</a>. 
             </li>
 
             <li>
@@ -447,17 +447,921 @@
 <!--/ Concurrent Work. -->
 
 
-<!--<section class="section" id="BibTeX">
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Qualitative Comparison</h2>
+    <div style="overflow-y: auto; height:500px; border:1px solid #ddd; padding:10px;">
+      <!-- Paste content from qualitative_comp_template.html here -->
+      <table>
+        <thead>
+          <tr>
+            <th>Prompt</th>
+            <th>AG3D</th>
+            <th>AG3DC+text</th>
+            <th>RenderDiff.</th>
+            <th>GANFusion (ours)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>a full-body photo of a woman wearing a green jacket, yellow pant, black boots</td>
+            <td><img src="qualitative_comparison_videos/ag3d/000.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/000.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/000.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/000.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a photo of a person wearing a green jacket, green pant, yellow sandals</td>
+            <td><img src="qualitative_comparison_videos/ag3d/001.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/001.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/001.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/001.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a photo of a person wearing a gray sweater, red pant, black socks</td>
+            <td><img src="qualitative_comparison_videos/ag3d/002.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/002.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/002.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/002.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a photo of a man wearing a yellow sweater, black pant</td>
+            <td><img src="qualitative_comparison_videos/ag3d/003.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/003.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/003.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/003.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a full-body photo of a man wearing a blue jacket, pink pant, black sneakers</td>
+            <td><img src="qualitative_comparison_videos/ag3d/004.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/004.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/004.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/004.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a photo of a person wearing a blue sweater, pink short</td>
+            <td><img src="qualitative_comparison_videos/ag3d/005.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/005.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/005.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/005.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a photo of a man wearing a purple sweater, brown pant, white socks</td>
+            <td><img src="qualitative_comparison_videos/ag3d/006.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/006.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/006.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/006.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a full-body photo of a woman wearing a purple jacket, purple pant, pink sneakers</td>
+            <td><img src="qualitative_comparison_videos/ag3d/007.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/007.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/007.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/007.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a full-body photo of a person wearing a purple jacket, gray pant, pink socks</td>
+            <td><img src="qualitative_comparison_videos/ag3d/008.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/008.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/008.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/008.gif"></td>
+        </tr>
+        
+        <tr>
+            <td>a full-body photo of a person wearing a red sweater, gray pant</td>
+            <td><img src="qualitative_comparison_videos/ag3d/009.gif"></td>
+            <td><img src="qualitative_comparison_videos/ag3d_text_clip/009.gif"></td>
+            <td><img src="qualitative_comparison_videos/render_diffusion/009.gif"></td>
+            <td><img src="qualitative_comparison_videos/ours/009.gif"></td>
+        </tr>
+        <tr>
+          <td>a full-body photo of a man wearing a purple jacket, gray pant, pink socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/000.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/000.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/000.png"></td>
+          <td><img src="qualitative_comparison/ours/images/000.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a woman wearing a pink jacket, black pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/001.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/001.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/001.png"></td>
+          <td><img src="qualitative_comparison/ours/images/001.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a woman wearing a blue jacket, black pant, black boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/002.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/002.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/002.png"></td>
+          <td><img src="qualitative_comparison/ours/images/002.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a green jacket, green pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/003.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/003.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/003.png"></td>
+          <td><img src="qualitative_comparison/ours/images/003.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a white dress shirt, brown pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/004.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/004.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/004.png"></td>
+          <td><img src="qualitative_comparison/ours/images/004.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a yellow sweater, orange pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/005.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/005.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/005.png"></td>
+          <td><img src="qualitative_comparison/ours/images/005.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a yellow sweater, orange pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/006.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/006.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/006.png"></td>
+          <td><img src="qualitative_comparison/ours/images/006.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a white sweater, white pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/007.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/007.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/007.png"></td>
+          <td><img src="qualitative_comparison/ours/images/007.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green sweater, gray pant, red sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/008.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/008.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/008.png"></td>
+          <td><img src="qualitative_comparison/ours/images/008.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a purple blouse, brown pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/009.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/009.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/009.png"></td>
+          <td><img src="qualitative_comparison/ours/images/009.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a brown sweater, beige pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/010.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/010.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/010.png"></td>
+          <td><img src="qualitative_comparison/ours/images/010.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a green sweater, brown pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/011.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/011.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/011.png"></td>
+          <td><img src="qualitative_comparison/ours/images/011.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a blue jacket, brown pant, blue sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/012.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/012.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/012.png"></td>
+          <td><img src="qualitative_comparison/ours/images/012.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a yellow jacket, yellow pant, gray socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/013.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/013.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/013.png"></td>
+          <td><img src="qualitative_comparison/ours/images/013.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, pink pant, pink socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/014.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/014.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/014.png"></td>
+          <td><img src="qualitative_comparison/ours/images/014.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a blue jacket, gray pant, brown boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/015.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/015.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/015.png"></td>
+          <td><img src="qualitative_comparison/ours/images/015.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a green sweater, black pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/016.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/016.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/016.png"></td>
+          <td><img src="qualitative_comparison/ours/images/016.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a blue jacket, blue pant, orange sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/017.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/017.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/017.png"></td>
+          <td><img src="qualitative_comparison/ours/images/017.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a white jacket, white pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/018.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/018.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/018.png"></td>
+          <td><img src="qualitative_comparison/ours/images/018.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a brown jacket, blue pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/019.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/019.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/019.png"></td>
+          <td><img src="qualitative_comparison/ours/images/019.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a woman wearing a white sweater, orange pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/020.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/020.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/020.png"></td>
+          <td><img src="qualitative_comparison/ours/images/020.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, black pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/021.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/021.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/021.png"></td>
+          <td><img src="qualitative_comparison/ours/images/021.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green blouse, yellow pant, yellow socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/022.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/022.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/022.png"></td>
+          <td><img src="qualitative_comparison/ours/images/022.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue jacket, purple pant, orange sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/023.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/023.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/023.png"></td>
+          <td><img src="qualitative_comparison/ours/images/023.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a woman wearing a green jacket, black pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/024.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/024.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/024.png"></td>
+          <td><img src="qualitative_comparison/ours/images/024.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a gray jacket, gray pant, brown socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/025.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/025.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/025.png"></td>
+          <td><img src="qualitative_comparison/ours/images/025.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a purple vest, purple pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/026.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/026.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/026.png"></td>
+          <td><img src="qualitative_comparison/ours/images/026.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a white sweater, beige pant, brown sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/027.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/027.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/027.png"></td>
+          <td><img src="qualitative_comparison/ours/images/027.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a blue sweater, brown pant, blue sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/028.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/028.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/028.png"></td>
+          <td><img src="qualitative_comparison/ours/images/028.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a purple polo shirt, purple pant, barefoot</td>
+          <td><img src="qualitative_comparison/ag3d/images/029.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/029.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/029.png"></td>
+          <td><img src="qualitative_comparison/ours/images/029.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a brown jacket, black pant, blue sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/030.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/030.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/030.png"></td>
+          <td><img src="qualitative_comparison/ours/images/030.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue sweater, gray pant, white sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/031.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/031.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/031.png"></td>
+          <td><img src="qualitative_comparison/ours/images/031.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a green jacket, beige pant, brown socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/032.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/032.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/032.png"></td>
+          <td><img src="qualitative_comparison/ours/images/032.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue coat, blue pant, green socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/033.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/033.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/033.png"></td>
+          <td><img src="qualitative_comparison/ours/images/033.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a orange jacket, purple pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/034.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/034.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/034.png"></td>
+          <td><img src="qualitative_comparison/ours/images/034.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, black pant, barefoot</td>
+          <td><img src="qualitative_comparison/ag3d/images/035.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/035.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/035.png"></td>
+          <td><img src="qualitative_comparison/ours/images/035.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a brown jacket, blue pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/036.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/036.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/036.png"></td>
+          <td><img src="qualitative_comparison/ours/images/036.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a purple sweater, brown pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/037.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/037.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/037.png"></td>
+          <td><img src="qualitative_comparison/ours/images/037.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a white jacket, white pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/038.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/038.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/038.png"></td>
+          <td><img src="qualitative_comparison/ours/images/038.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a woman wearing a blue sweater, white pant, blue sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/039.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/039.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/039.png"></td>
+          <td><img src="qualitative_comparison/ours/images/039.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, black pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/040.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/040.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/040.png"></td>
+          <td><img src="qualitative_comparison/ours/images/040.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a red sweater, orange pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/041.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/041.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/041.png"></td>
+          <td><img src="qualitative_comparison/ours/images/041.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a woman wearing a blue jacket, yellow pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/042.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/042.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/042.png"></td>
+          <td><img src="qualitative_comparison/ours/images/042.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue sweater, gray pant, white sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/043.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/043.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/043.png"></td>
+          <td><img src="qualitative_comparison/ours/images/043.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a yellow sweater, black pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/044.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/044.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/044.png"></td>
+          <td><img src="qualitative_comparison/ours/images/044.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green sweater, brown pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/045.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/045.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/045.png"></td>
+          <td><img src="qualitative_comparison/ours/images/045.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a blue coat, blue pant, white boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/046.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/046.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/046.png"></td>
+          <td><img src="qualitative_comparison/ours/images/046.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a yellow jacket, blue jean, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/047.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/047.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/047.png"></td>
+          <td><img src="qualitative_comparison/ours/images/047.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a red jacket, red pant, barefoot</td>
+          <td><img src="qualitative_comparison/ag3d/images/048.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/048.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/048.png"></td>
+          <td><img src="qualitative_comparison/ours/images/048.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a gray jacket, gray pant, brown boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/049.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/049.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/049.png"></td>
+          <td><img src="qualitative_comparison/ours/images/049.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green jacket, yellow pant, black boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/050.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/050.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/050.png"></td>
+          <td><img src="qualitative_comparison/ours/images/050.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a blue tank top, purple pant, purple socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/051.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/051.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/051.png"></td>
+          <td><img src="qualitative_comparison/ours/images/051.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a red sweater, white pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/052.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/052.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/052.png"></td>
+          <td><img src="qualitative_comparison/ours/images/052.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green polo shirt, beige pant, barefoot</td>
+          <td><img src="qualitative_comparison/ag3d/images/053.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/053.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/053.png"></td>
+          <td><img src="qualitative_comparison/ours/images/053.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a gray jacket, blue jean, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/054.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/054.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/054.png"></td>
+          <td><img src="qualitative_comparison/ours/images/054.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a red sweater, white pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/055.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/055.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/055.png"></td>
+          <td><img src="qualitative_comparison/ours/images/055.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue sweater, blue pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/056.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/056.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/056.png"></td>
+          <td><img src="qualitative_comparison/ours/images/056.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a white sweater, orange pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/057.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/057.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/057.png"></td>
+          <td><img src="qualitative_comparison/ours/images/057.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a purple polo shirt, white pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/058.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/058.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/058.png"></td>
+          <td><img src="qualitative_comparison/ours/images/058.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a purple sweater, blue jean, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/059.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/059.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/059.png"></td>
+          <td><img src="qualitative_comparison/ours/images/059.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, gray pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/060.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/060.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/060.png"></td>
+          <td><img src="qualitative_comparison/ours/images/060.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue blouse, purple pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/061.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/061.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/061.png"></td>
+          <td><img src="qualitative_comparison/ours/images/061.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a orange tank top, orange pant, brown sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/062.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/062.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/062.png"></td>
+          <td><img src="qualitative_comparison/ours/images/062.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a purple blouse, purple pant, brown sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/063.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/063.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/063.png"></td>
+          <td><img src="qualitative_comparison/ours/images/063.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a yellow jacket, yellow pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/064.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/064.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/064.png"></td>
+          <td><img src="qualitative_comparison/ours/images/064.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a red sweater, red pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/065.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/065.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/065.png"></td>
+          <td><img src="qualitative_comparison/ours/images/065.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a purple blouse, white pant, pink sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/066.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/066.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/066.png"></td>
+          <td><img src="qualitative_comparison/ours/images/066.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a gray sweater, gray pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/067.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/067.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/067.png"></td>
+          <td><img src="qualitative_comparison/ours/images/067.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green jacket, white pant, red sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/068.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/068.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/068.png"></td>
+          <td><img src="qualitative_comparison/ours/images/068.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, gray pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/069.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/069.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/069.png"></td>
+          <td><img src="qualitative_comparison/ours/images/069.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue jacket, pink pant, blue sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/070.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/070.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/070.png"></td>
+          <td><img src="qualitative_comparison/ours/images/070.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a blue sweater, white pant, brown socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/071.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/071.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/071.png"></td>
+          <td><img src="qualitative_comparison/ours/images/071.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green sweater, brown pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/072.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/072.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/072.png"></td>
+          <td><img src="qualitative_comparison/ours/images/072.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a white sweater, gray pant, orange socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/073.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/073.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/073.png"></td>
+          <td><img src="qualitative_comparison/ours/images/073.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a green jacket, black pant, brown boots</td>
+          <td><img src="qualitative_comparison/ag3d/images/074.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/074.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/074.png"></td>
+          <td><img src="qualitative_comparison/ours/images/074.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a pink jacket, brown pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/075.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/075.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/075.png"></td>
+          <td><img src="qualitative_comparison/ours/images/075.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a blue sweater, blue pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/076.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/076.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/076.png"></td>
+          <td><img src="qualitative_comparison/ours/images/076.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a green sweater, green pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/077.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/077.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/077.png"></td>
+          <td><img src="qualitative_comparison/ours/images/077.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a green sweater, green pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/078.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/078.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/078.png"></td>
+          <td><img src="qualitative_comparison/ours/images/078.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a woman wearing a blue jacket, yellow pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/079.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/079.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/079.png"></td>
+          <td><img src="qualitative_comparison/ours/images/079.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a green jacket, green short, barefoot</td>
+          <td><img src="qualitative_comparison/ag3d/images/080.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/080.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/080.png"></td>
+          <td><img src="qualitative_comparison/ours/images/080.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a orange jacket, purple pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/081.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/081.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/081.png"></td>
+          <td><img src="qualitative_comparison/ours/images/081.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a blue sweater, brown pant, white socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/082.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/082.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/082.png"></td>
+          <td><img src="qualitative_comparison/ours/images/082.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a pink jacket, gray pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/083.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/083.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/083.png"></td>
+          <td><img src="qualitative_comparison/ours/images/083.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a purple tank top, purple pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/084.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/084.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/084.png"></td>
+          <td><img src="qualitative_comparison/ours/images/084.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a woman wearing a black sweater, black pant, black sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/085.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/085.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/085.png"></td>
+          <td><img src="qualitative_comparison/ours/images/085.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a white dress shirt, brown pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/086.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/086.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/086.png"></td>
+          <td><img src="qualitative_comparison/ours/images/086.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a pink sweater, pink pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/087.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/087.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/087.png"></td>
+          <td><img src="qualitative_comparison/ours/images/087.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a white sweater, gray pant, orange socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/088.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/088.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/088.png"></td>
+          <td><img src="qualitative_comparison/ours/images/088.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a black jacket, gray pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/089.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/089.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/089.png"></td>
+          <td><img src="qualitative_comparison/ours/images/089.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a yellow jacket, yellow pant, gray socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/090.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/090.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/090.png"></td>
+          <td><img src="qualitative_comparison/ours/images/090.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a pink sweater, white pant, red socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/091.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/091.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/091.png"></td>
+          <td><img src="qualitative_comparison/ours/images/091.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a woman wearing a purple jacket, purple pant, pink sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/092.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/092.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/092.png"></td>
+          <td><img src="qualitative_comparison/ours/images/092.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a blue jacket, blue pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/093.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/093.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/093.png"></td>
+          <td><img src="qualitative_comparison/ours/images/093.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a blue sweater, white pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/094.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/094.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/094.png"></td>
+          <td><img src="qualitative_comparison/ours/images/094.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a purple jacket, purple pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/095.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/095.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/095.png"></td>
+          <td><img src="qualitative_comparison/ours/images/095.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a person wearing a orange blouse, orange pant, white sneakers</td>
+          <td><img src="qualitative_comparison/ag3d/images/096.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/096.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/096.png"></td>
+          <td><img src="qualitative_comparison/ours/images/096.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a person wearing a blue jacket, blue pant, black socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/097.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/097.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/097.png"></td>
+          <td><img src="qualitative_comparison/ours/images/097.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a full-body photo of a man wearing a purple jacket, gray pant, pink socks</td>
+          <td><img src="qualitative_comparison/ag3d/images/098.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/098.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/098.png"></td>
+          <td><img src="qualitative_comparison/ours/images/098.png"></td>
+      </tr>
+      
+      <tr>
+          <td>a photo of a man wearing a pink polo shirt, brown pant, brown sandals</td>
+          <td><img src="qualitative_comparison/ag3d/images/099.png"></td>
+          <td><img src="qualitative_comparison/ag3d_text_clip/images/099.png"></td>
+          <td><img src="qualitative_comparison/render_diffusion/images/099.png"></td>
+          <td><img src="qualitative_comparison/ours/images/099.png"></td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="has-text-centered">
+      Scroll to view the full qualitative comparison with the baselines (Only the first 10 comparisons are shown as videos, the remaining comparisons are shown as images to keep the size manageable.)
+    </p>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{attaiki2025ganfusion,
+  author    = {Attaiki, Souhaib and Guerrero, Paul and Ceylan, Duygu and Mitra, Niloy J. and Ovsjanikov, Maks},
+  title     = {GANFusion: : Feed-Forward Text-to-3D with Diffusion in GAN Space},
+  journal   = {WACV},
+  year      = {2025},
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 <!-- 
 <footer class="footer">
