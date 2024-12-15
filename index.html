@@ -55,7 +55,28 @@
       z-index: 20;
       background-color: white;
   }
-  </style>
+  .qualitative-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .qualitative-table thead th {
+    text-align: center; /* Center-align column titles */
+    padding: 0px 0; /* Reduce spacing above and below column titles */
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: white;
+  }
+  .qualitative-table td {
+    text-align: center; /* Center-align table content */
+  }
+  /* .qualitative-table img {
+    width: 256px;
+    height: 256px; */
+  /* } */
+
+</style>
 <body>
 
   <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -460,7 +481,7 @@
       Only the first 10 comparisons are shown as videos to demonstrate motion consistency.
     </p>
     <div style="overflow-y: auto; height:500px; border:1px solid #ddd; padding:10px; margin-bottom: 20px;">
-      <table>
+      <table class="qualitative-table">
         <thead>
           <tr>
             <th>Prompt</th>
@@ -572,7 +593,7 @@
       The remaining comparisons are shown as static images to keep the size manageable.
     </p>
     <div style="overflow-y: auto; height:500px; border:1px solid #ddd; padding:10px;">
-      <table>
+      <table class="qualitative-table">
         <thead>
           <tr>
             <th>Prompt</th>
